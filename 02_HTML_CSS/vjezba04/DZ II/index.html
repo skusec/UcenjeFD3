@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigurna Prijava</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <div class="lock" aria-hidden="true">
+            <div class="lock-shackle"></div>
+            <div class="lock-body">
+                <span></span>
+            </div>
+        </div>
+
+        <section class="login-card">
+            <form class="login-form">
+                <fieldset>
+                    <legend>Sigurna Prijava</legend>
+
+                    <label for="username">Korisničko ime</label>
+                    <input type="text" id="username" name="username" placeholder="username">
+
+                    <label for="password">Lozinka</label>
+                    <input type="password" id="password" name="password" placeholder="••••••">
+
+                    <div class="remember-row">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Zapamti uređaj</label>
+                    </div>
+
+                    <button type="submit" class="login-button">Prijavi se</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="activity-section">
+            <h2>Nedavne aktivnosti prijave</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>IP ADRESA</th>
+                        <th>VRIJEME</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>192.168.1.15</td>
+                        <td>12:45</td>
+                        <td class="success">Uspjeh</td>
+                    </tr>
+                    <tr>
+                        <td>10.0.0.52</td>
+                        <td>Jučer</td>
+                        <td class="error">Greška</td>
+                    </tr>
+                    <tr>
+                        <td>88.102.x.x</td>
+                        <td>01.12.</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Prikaz zadnja 3 pokušaja</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
