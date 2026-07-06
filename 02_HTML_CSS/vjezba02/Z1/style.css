@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    background-color: #eef0f3;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.stranica {
+    width: 720px;
+    margin: 35px auto;
+    background-color: white;
+    padding: 45px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px #c8c8c8;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+h1 {
+    font-size: 45px;
+    letter-spacing: 3px;
+    color: #2d3f50;
+    margin-bottom: 25px;
+}
+
+header h2 {
+    color: #7f8c8d;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-variant: small-caps;
+    border-bottom: 2px solid #e67e22;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+mark {
+    background-color: #fff0a6;
+    padding: 2px 4px;
+}
+
+.narancasto {
+    color: #e67e22;
+}
+
+figure {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 25px 0;
+    text-align: center;
+    border-radius: 4px;
+}
+
+figure img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+figcaption {
+    font-style: italic;
+    color: #666;
+    margin-top: 8px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e1e1e1;
+    margin: 35px 0;
+}
+
+h3 {
+    font-size: 23px;
+    color: #333;
+    margin-top: 25px;
+}
+
+.verzije {
+    border-left: 5px solid #3498db;
+    background-color: #fafafa;
+    padding: 15px 25px 15px 70px;
+}
+
+.verzije li {
+    margin-bottom: 15px;
+}
+
+.verzije strong {
+    color: #e67e22;
+    font-size: 18px;
+}
+
+.verzije span {
+    font-size: 14px;
+}
+
+pre {
+    background-color: #263238;
+    color: #eeeeee;
+    padding: 20px;
+    border-left: 6px solid #f2c94c;
+    border-radius: 5px;
+    font-size: 16px;
+    overflow: auto;
+}
+
+kbd {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.pojmovi {
+    background-color: #eef2f3;
+    padding: 18px;
+    border-radius: 7px;
+    font-family: monospace;
+}
+
+.pojmovi p {
+    margin: 8px 0;
+}
+
+abbr {
+    color: #268ac0;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+blockquote {
+    background-color: #ffe2e2;
+    border-left: 5px solid #c0392b;
+    padding: 22px;
+    margin: 25px 0;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+blockquote p {
+    font-size: 19px;
+}
+
+cite {
+    font-style: italic;
+}
+
+.ukras {
+    text-align: center;
+    color: #e74c3c;
+    font-size: 25px;
+    letter-spacing: 6px;
+}
+
+ruby {
+    font-weight: bold;
+}
+
+footer {
+    border-top: 1px dashed #ccc;
+    text-align: center;
+    margin-top: 45px;
+    padding-top: 25px;
+    font-size: 14px;
+}
+
+footer strong {
+    color: #e67e22;
+}
+
+footer a {
+    color: #3498db;
+}
+
+small {
+    display: block;
+    margin-top: 25px;
+}

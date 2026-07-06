@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitnes Trener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="gornji-meni">
+        <div class="logo">FITNES TRENER</div>
+
+        <nav>
+            <a href="#pocetna">Početna</a>
+            <a href="#programi">Programi</a>
+            <a href="#cijene">Cjenik</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <section id="pocetna" class="hero">
+        <div class="hero-tekst">
+            <h1>TRANSFORMIRAJ SVOJE TIJELO</h1>
+            <p>Profesionalno vođenje, planovi prehrane i motivacija koja ti treba.</p>
+            <a href="#kontakt" class="gumb">ZAPOČNI DANAS</a>
+        </div>
+    </section>
+
+    <main>
+
+        <section id="programi" class="sekcija">
+            <h2>Što nudimo?</h2>
+            <div class="crtica"></div>
+
+            <div class="kartice">
+                <article class="kartica">
+                    <h3>Osobni Trening</h3>
+                    <p>
+                        Jedan na jedan rad s certificiranim trenerom u teretani.
+                        Fokus na pravilno izvođenje vježbi i maksimalne rezultate.
+                    </p>
+                </article>
+
+                <article class="kartica">
+                    <h3>Plan Prehrane</h3>
+                    <p>
+                        Personalizirani jelovnici prilagođeni tvojim ciljevima,
+                        bilo da želiš smršaviti ili dobiti mišićnu masu.
+                    </p>
+                </article>
+
+                <article class="kartica">
+                    <h3>Online Mentorstvo</h3>
+                    <p>
+                        Treniraj bilo gdje i bilo kada uz našu aplikaciju,
+                        video upute i tjedne check-in konzultacije.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="cijene" class="sekcija tamnija">
+            <h2>Paketi i Cijene</h2>
+            <div class="crtica"></div>
+
+            <p class="opis-tablice">Mjesečni paketi usluga</p>
+
+            <table>
+                <tr>
+                    <th>USLUGA</th>
+                    <th>TRAJANJE</th>
+                    <th>CIJENA</th>
+                </tr>
+                <tr>
+                    <td><strong>Start Paket</strong> (3 treninga tjedno)</td>
+                    <td>1 Mjesec</td>
+                    <td>150 €</td>
+                </tr>
+                <tr>
+                    <td><strong>Pro Paket</strong> (5 treninga tjedno + prehrana)</td>
+                    <td>1 Mjesec</td>
+                    <td>250 €</td>
+                </tr>
+                <tr>
+                    <td><strong>Online Coaching</strong></td>
+                    <td>1 Mjesec</td>
+                    <td>100 €</td>
+                </tr>
+                <tr>
+                    <td><strong>Plan Prehrane</strong> (Samo izrada)</td>
+                    <td>Jednokratno</td>
+                    <td>50 €</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="video-sekcija">
+            <div class="video-okvir">
+                <iframe 
+                    src="https://www.youtube.com/embed/UItWltVZZmE"
+                    title="Beginner workout"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section id="kontakt" class="sekcija kontakt">
+            <h2>Javi nam se</h2>
+            <div class="crtica"></div>
+
+            <div class="kontakt-red">
+
+                <div class="podaci">
+                    <h3>Fitnes Centar "Olimp"</h3>
+
+                    <p>
+                        Ilica 200, 10000 Zagreb<br>
+                        Hrvatska
+                    </p>
+
+                    <p>
+                        Email: <a href="mailto:info@fitnestrener.hr">info@fitnestrener.hr</a><br>
+                        Tel: +385 91 123 4567
+                    </p>
+
+                    <p>
+                        Radno vrijeme:<br>
+                        06:00 - 22:00
+                    </p>
+                </div>
+
+                <form>
+                    <label for="ime">Ime i Prezime:</label>
+                    <input type="text" id="ime" placeholder="Vaše ime">
+
+                    <label for="email">Email adresa:</label>
+                    <input type="email" id="email" placeholder="primjer@email.com">
+
+                    <label for="cilj">Vaš glavni cilj:</label>
+                    <select id="cilj">
+                        <option>Mršavljenje</option>
+                        <option>Dobivanje mišićne mase</option>
+                        <option>Kondicija</option>
+                        <option>Opće zdravlje</option>
+                    </select>
+
+                    <label for="poruka">Poruka:</label>
+                    <textarea id="poruka" placeholder="Opišite svoje trenutno stanje..."></textarea>
+
+                    <button type="submit">POŠALJI UPIT</button>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Fitnes Trener d.o.o. Sva prava pridržana.</p>
+        <p>
+            <a href="#">Pravila privatnosti</a> |
+            <a href="#">Uvjeti korištenja</a>
+        </p>
+    </footer>
+
+</body>
+</html>

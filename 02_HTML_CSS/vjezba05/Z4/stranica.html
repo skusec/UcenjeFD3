@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tko pjeva zlo ne misli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Tko pjeva zlo ne misli</h1>
+        <p>Dnevnik malog Perice</p>
+    </header>
+
+    <hr>
+
+    <nav>
+        <a href="#radnja">Radnja</a>
+        <a href="#likovi">Likovi</a>
+        <a href="#kontakt">Piši nam</a>
+    </nav>
+
+    <main>
+
+        <section id="radnja" class="kartica">
+            <h2>O čemu se radi?</h2>
+
+            <div class="radnja-sadrzaj">
+                <div class="tekst">
+                    <p>
+                        Radnja filma smještena je u <strong>Zagreb</strong> sredinom
+                        tridesetih godina 20. stoljeća.
+                    </p>
+
+                    <p>
+                        Sve se vrti oko obitelji <em>Šafranek</em> i njihovih bračnih
+                        zgoda i nezgoda, začinjenih pjesmom i izletima u Maksimir.
+                    </p>
+
+                    <blockquote>
+                        "Ljubim ruke, milostiva!"
+                    </blockquote>
+                </div>
+
+                <div class="video">
+                    <iframe 
+                        src="https://www.youtube.com/embed/d0tam5HGHxw"
+                        title="Tko pjeva zlo ne misli"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="likovi" class="kartica">
+            <h2>Glavni likovi</h2>
+
+            <table>
+                <tr>
+                    <th>Ime</th>
+                    <th>Uloga</th>
+                    <th>Osobina</th>
+                </tr>
+                <tr>
+                    <td>Franjo</td>
+                    <td>Otac</td>
+                    <td>Voli gemišt i politiku</td>
+                </tr>
+                <tr>
+                    <td>Ana</td>
+                    <td>Majka</td>
+                    <td>Romantična duša</td>
+                </tr>
+                <tr>
+                    <td>Perica</td>
+                    <td>Sin</td>
+                    <td>Promatrač</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="kontakt" class="kartica">
+            <h2>Pošalji pismo u Gornji Grad</h2>
+
+            <form>
+                <label for="ime">Tvoje ime:</label>
+                <input type="text" id="ime" placeholder="Npr. Mina">
+
+                <label for="poruka">Poruka:</label>
+                <textarea id="poruka"></textarea>
+
+                <button type="submit">Pošalji golubom</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025. Edunova</p>
+    </footer>
+
+</body>
+
+</html>

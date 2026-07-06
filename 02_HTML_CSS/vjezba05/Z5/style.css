@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #181818;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gornji-meni {
+    height: 55px;
+    background-color: #151515;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 65px;
+}
+
+.logo {
+    color: #c6ff00;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #c6ff00;
+}
+
+.hero {
+    height: 440px;
+    background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url("teretana.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* malo nakošeni donji rub, kao na primjeru */
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+}
+
+.hero h1 {
+    font-size: 58px;
+    margin: 0 0 20px 0;
+    font-weight: 900;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.gumb {
+    background-color: #c6ff00;
+    color: black;
+    padding: 16px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.gumb:hover {
+    background-color: white;
+}
+
+.sekcija {
+    padding: 85px 10%;
+    text-align: center;
+    background-color: #1b1b1b;
+}
+
+.tamnija {
+    background-color: #222;
+}
+
+.sekcija h2 {
+    color: #c6ff00;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.crtica {
+    width: 45px;
+    height: 4px;
+    background-color: white;
+    margin: 0 auto 45px auto;
+    border-radius: 10px;
+}
+
+.kartice {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.kartica {
+    background-color: #292929;
+    width: 31%;
+    min-height: 180px;
+    padding: 35px 25px;
+    border-radius: 10px;
+}
+
+.kartica h3 {
+    font-size: 23px;
+    margin-top: 0;
+}
+
+.kartica p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.opis-tablice {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+table {
+    width: 62%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: #2b2b2b;
+    box-shadow: 0 6px 14px #111;
+}
+
+th {
+    background-color: #c6ff00;
+    color: black;
+    padding: 20px;
+    font-size: 16px;
+}
+
+td {
+    padding: 20px;
+    border-bottom: 1px solid #444;
+    font-size: 14px;
+}
+
+.video-sekcija {
+    padding: 90px 10%;
+    background-color: #181818;
+}
+
+.video-okvir {
+    width: 88%;
+    margin: auto;
+}
+
+iframe {
+    width: 100%;
+    height: 520px;
+    border: none;
+}
+
+.kontakt {
+    background-color: #1b1b1b;
+}
+
+.kontakt-red {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    text-align: left;
+}
+
+.podaci {
+    width: 40%;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.podaci h3 {
+    font-size: 19px;
+}
+
+.podaci a {
+    color: #c6ff00;
+    font-weight: bold;
+}
+
+form {
+    width: 50%;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+    padding: 13px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 135px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    background-color: #c6ff00;
+    color: black;
+    border: none;
+    padding: 14px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+}
+
+footer {
+    background-color: black;
+    border-top: 2px solid #c6ff00;
+    text-align: center;
+    padding: 55px 20px;
+    color: #999;
+    font-size: 12px;
+}
+
+footer a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #c6ff00;
+}

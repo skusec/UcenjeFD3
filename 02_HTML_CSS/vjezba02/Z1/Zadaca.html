@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Povijest HTML-a</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="stranica">
+
+        <header>
+            <h1>POVIJEST HTML-A</h1>
+            <h2>Od jednostavnog teksta do modernog Weba</h2>
+        </header>
+
+        <main>
+
+            <p>
+                Sve je počelo 1989. godine u CERN-u.
+                <del>Tim Berners-Lee</del> je osmislio sustav koji bi
+                istraživačima omogućio dijeljenje dokumenata.
+                Taj sustav postao je poznat kao <mark>World Wide Web</mark>.
+            </p>
+
+            <figure>
+                <img src="tim.jpg" alt="Sir Tim Berners-Lee">
+                <figcaption>Otac weba: Sir Tim Berners-Lee</figcaption>
+            </figure>
+
+            <p>
+                Jezik koji je definirao strukturu tih dokumenata nazvan je
+                <strong class="narancasto">HTML</strong>
+                (HyperText Markup Language). Njegova osnovna svrha bila je
+                semantički opisati strukturu dokumenta, a ne njegov izgled.
+            </p>
+
+            <hr>
+
+            <section>
+                <h3>Ključne verzije</h3>
+
+                <ol class="verzije">
+                    <li>
+                        <strong>HTML 1.0 (1991)</strong><br>
+                        <span>Prva neslužbena verzija. Sadržavala je samo 18 tagova.</span>
+                    </li>
+
+                    <li>
+                        <strong>HTML 2.0 (1995)</strong><br>
+                        <span>Prvi službeni standard (RFC 1866).</span>
+                    </li>
+
+                    <li>
+                        <strong>HTML 3.2 (1997)</strong><br>
+                        <span>Uvedene tablice i apleti. "Rat preglednika" je bio u punom jeku.</span>
+                    </li>
+
+                    <li>
+                        <strong>HTML 4.01 (1999)</strong><br>
+                        <span>Dominantna verzija gotovo desetljeće. Odvajanje stila (CSS) od sadržaja.</span>
+                    </li>
+
+                    <li>
+                        <strong>HTML5 (2014)</strong><br>
+                        <span>Revolucija. Multimedija bez dodataka, semantički elementi.</span>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h3>Struktura Dokumenta</h3>
+
+                <p>Osnovna struktura HTML5 dokumenta izgleda ovako:</p>
+
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="hr"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Naslov&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Pozdrav Svijete!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <p>
+                    Da biste spremili ovaj kod, pritisnite
+                    <kbd>Ctrl</kbd> + <kbd>S</kbd> na tipkovnici.
+                </p>
+            </section>
+
+            <section>
+                <h3>Važni pojmovi</h3>
+
+                <div class="pojmovi">
+                    <p>
+                        <abbr title="HyperText Transfer Protocol">HTTP</abbr>
+                        HyperText Transfer Protocol – protokol za prijenos podataka.
+                    </p>
+
+                    <p>
+                        <abbr title="Uniform Resource Identifier">URI</abbr>
+                        Uniform Resource Identifier – adresa resursa na webu.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Filozofija Weba</h3>
+
+                <blockquote>
+                    <p>
+                        Snaga Weba je u njegovoj univerzalnosti. Pristup svima,
+                        bez obzira na invaliditet, ključni je aspekt.
+                    </p>
+                    <cite>— Tim Berners-Lee</cite>
+                </blockquote>
+            </section>
+
+            <div class="ukras">••••</div>
+
+            <p>
+                Danas HTML koristimo zajedno s CSS-om i JavaScriptom.<br>
+                Japanski naziv za Web:
+                <ruby>網<rt>Mreža</rt></ruby>.
+            </p>
+
+        </main>
+
+        <footer>
+            <p>
+                Autor stranice: <strong>Web Povjesničar</strong><br>
+                Kontakt:
+                <a href="mailto:info@povijesthtml.org">info@povijesthtml.org</a><br>
+                <time datetime="2023-10-27">27. Listopada 2023.</time>
+            </p>
+
+            <small>&copy; Sva prava pridržana.</small>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

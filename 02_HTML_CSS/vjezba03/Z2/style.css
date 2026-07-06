@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.stranica {
+    width: 100%;
+    min-height: 100vh;
+    padding: 12px;
+}
+
+.p1,
+.p2,
+.p4,
+.p5,
+.s1,
+.s2,
+.s3 {
+    border: 2px solid #333;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 2px 2px 3px black;
+}
+
+.p1 {
+    height: 85px;
+    background-color: #e74c3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sredina {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 760px;
+}
+
+.p2 {
+    width: 9%;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p4 {
+    width: 9%;
+    background-color: #9b59b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glavni-dio {
+    flex: 1;
+    border: 2px solid #333;
+    padding: 170px 12px 0 12px;
+}
+
+.s1 {
+    height: 28px;
+    background-color: #f1c40f;
+    line-height: 24px;
+}
+
+.donji-red {
+    display: flex;
+    gap: 12px;
+    margin-top: 350px;
+}
+
+.s2 {
+    width: 50%;
+    height: 28px;
+    background-color: #e67e22;
+    line-height: 24px;
+}
+
+.s3 {
+    width: 50%;
+    height: 28px;
+    background-color: #16a085;
+    line-height: 24px;
+}
+
+.p5 {
+    height: 65px;
+    background-color: #2ecc71;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
