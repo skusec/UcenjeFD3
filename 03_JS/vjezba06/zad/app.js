@@ -75,6 +75,93 @@ document.getElementById('izvedi').addEventListener('click', () => {
 
                     //završen 2.zadatak
                     break
+
+                case 3:
+                    //počinje 3.zadatak
+                    if(!aString){
+                        rez.innerHTML = 'Obavezan unos bodova'
+                        rez.style.color = 'red'
+                        return
+                    }
+
+                    const bodovi = Number(aString)
+
+                    if(isNaN(bodovi)){
+                        rez.innerHTML = 'Unesi broj'
+                        rez.style.color = 'red'
+                        return
+                    }
+
+                    if(bodovi < 0 || bodovi > 100){
+                        rez.innerHTML = 'Broj bodova mora biti od 0 do 100'
+                        rez.style.color = 'red'
+                        return
+                    }
+
+                    switch(true){
+                        case bodovi < 50:
+                            rez.innerHTML = 'Nedovoljan'
+                            rez.style.color = 'red'
+                            break
+
+                        case bodovi <= 64:
+                            rez.innerHTML = 'Dovoljan'
+                            rez.style.color = 'yellow'
+                            break
+
+                        case bodovi <= 79:
+                            rez.innerHTML = 'Dobar'
+                            rez.style.color = 'orange'
+                            break
+                        
+                        case bodovi <= 89:
+                            rez.innerHTML = 'Vrlo dobar'
+                            rez.style.color = 'green'
+                            break
+
+                        case bodovi <= 100:
+                            rez.innerHTML = 'Odličan'
+                            rez.style.color = 'green'
+                            break    
+                    }
+
+                    //završen 3.zadatak
+                    break
+
+                    case 4:
+                        //počinje 4. zadatak
+                    if(!aString){
+                        rez.innerHTML = 'Obavezan unos namirnice'
+                        rez.style.color = 'red'
+                        return
+                    }
+                    
+                    switch(aString.toLowerCase()){
+                        case 'janjetina':
+                        case 'svinjetina':
+                        case 'teletina':
+                        rez.innerHTML = 'Meso'
+                        rez.style.color = 'red'
+                        break
+
+                        case 'jabuka':
+                        case 'kruška':
+                        case 'šljiva':
+                        case 'jagoda':
+                        rez.innerHTML = 'Voće'
+                        rez.style.color = 'green'
+                        break
+
+                        default:
+                            rez.innerHTML = 'Ne može se odrediti'
+                            rez.style.color = 'gray'
+                    }
+
+                    //završen 4.zadatak
+                    break
+
+
+
         }
     
 })
