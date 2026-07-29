@@ -99,29 +99,35 @@ document.getElementById('izvedi').addEventListener('click', () => {
       // kraj rješavanje 3. zadatak
       break;
     case '4':
-      // rješavanje 4. zadatak
-      // rješavanje 4. zadatak
-      // 4. Za unesenu riječ u polje A provjerite da li je palindrom ili ne
-      // Ružan Edo ode na žur
-      // ružanedoodenažur
 
-      let p = ''
-      for (let i = 0; i < a.length; i++) {  //prvo čistim razmake i sve svodim na mala slova
-        if(a[i] !== ''){
-          p += p[1].toLocaleLowerCase()
-        }
-      }
+  let tekst = a.toLowerCase()
+  let ocisceniTekst = ''
 
-      let palindrom = true
+  // uklanjamo razmake
+  for (let i = 0; i < tekst.length; i++) {
+    if (tekst[i] !== ' ') {
+      ocisceniTekst += tekst[i]
+    }
+  }
 
-      for(let i = 0; p.length / 2;i++){
-        if(p[1] !== p[p.length - 1 - i]){
-          palindrom = false
-          break
-        }
-      }
+  let palindrom = true
 
-      rezultat.innerHTML = palindrom ? 'PALINDROM' : 'NIJE PALINDROM'
+  // uspoređujemo prvo i zadnje slovo,
+  // zatim drugo i predzadnje itd.
+  for (let i = 0; i < ocisceniTekst.length / 2; i++) {
+    if (ocisceniTekst[i] !== ocisceniTekst[ocisceniTekst.length - 1 - i]) {
+      palindrom = false
+      break
+    }
+  }
+
+  rezultat.innerHTML = palindrom
+    ? 'Uneseni tekst je palindrom.'
+    : 'Uneseni tekst nije palindrom.'
+
+  break
+
+    
 
 
 
