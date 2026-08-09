@@ -458,21 +458,18 @@ h2 {
 }
 
 .archive {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 14px;
+  align-items: flex-start;
 }
 
 .archive img {
   height: 500px;
-  object-fit: cover;
+  width: auto;
   filter: saturate(.78) contrast(.96);
 }
 
-.archive img:nth-child(2) {
-  transform: translateY(0px);
-  object-position: left center;
-}
+
 
 /* CONTACT */
 .contact {
