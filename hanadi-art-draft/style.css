@@ -750,3 +750,660 @@ footer {
     flex-direction: column;
   }
 }
+
+
+
+/* ==================================================
+   ART CAROUSEL
+   ================================================== */
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 34px 0 32px;
+}
+
+.gallery-filter {
+  border: 1px solid rgba(18, 42, 37, 0.2);
+  background: transparent;
+  color: #5d605a;
+  padding: 11px 18px;
+  border-radius: 999px;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.gallery-filter:hover {
+  transform: translateY(-2px);
+  border-color: #b68a45;
+}
+
+.gallery-filter.active {
+  background: #142824;
+  color: #fff;
+  border-color: #142824;
+}
+
+
+/* GLAVNI TAMNI GALERIJSKI PROSTOR */
+
+.art-carousel {
+  position: relative;
+  width: 100%;
+  min-height: 640px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0) 42%
+    ),
+    #111;
+
+  border-radius: 4px;
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.16),
+    inset 0 0 80px rgba(0, 0, 0, 0.3);
+}
+
+
+/* PROZOR KROZ KOJI GLEDAMO CAROUSEL */
+
+.carousel-viewport {
+  position: relative;
+  width: 100%;
+  min-height: 640px;
+  overflow: hidden;
+  perspective: 1400px;
+}
+
+
+/* TRACK */
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 640px;
+}
+
+
+/* SVAKA SLIKA KOJU ĆE JS KASNIJE UBACITI */
+
+.carousel-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: clamp(260px, 28vw, 390px);
+  max-height: 570px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.65);
+
+  transition:
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.6s ease,
+    filter 0.6s ease;
+
+  filter:
+    brightness(0.45)
+    saturate(0.7);
+
+  z-index: 1;
+}
+
+
+/* SAMA MASTER PREZENTACIJA SLIKE */
+
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  max-height: 570px;
+
+  object-fit: contain;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.55);
+
+  cursor: pointer;
+  user-select: none;
+}
+
+
+/* AKTIVNA SLIKA */
+
+.carousel-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+
+  filter:
+    brightness(1)
+    saturate(1);
+
+  z-index: 5;
+}
+
+
+/* PRVA LIJEVO */
+
+.carousel-slide.is-prev {
+  opacity: 0.55;
+  pointer-events: auto;
+
+  transform:
+    translate(-128%, -50%)
+    scale(0.72)
+    rotateY(12deg);
+
+  z-index: 3;
+}
+
+
+/* PRVA DESNO */
+
+.carousel-slide.is-next {
+  opacity: 0.55;
+  pointer-events: auto;
+
+  transform:
+    translate(28%, -50%)
+    scale(0.72)
+    rotateY(-12deg);
+
+  z-index: 3;
+}
+
+
+/* DRUGA LIJEVO */
+
+.carousel-slide.is-far-prev {
+  opacity: 0.2;
+
+  transform:
+    translate(-185%, -50%)
+    scale(0.55)
+    rotateY(18deg);
+
+  z-index: 2;
+}
+
+
+/* DRUGA DESNO */
+
+.carousel-slide.is-far-next {
+  opacity: 0.2;
+
+  transform:
+    translate(85%, -50%)
+    scale(0.55)
+    rotateY(-18deg);
+
+  z-index: 2;
+}
+
+
+/* STRELICE */
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+
+  width: 52px;
+  height: 52px;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.42);
+  color: #fff;
+
+  font-size: 1.4rem;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.carousel-arrow:hover {
+  background: #b68a45;
+  border-color: #b68a45;
+}
+
+.carousel-prev {
+  left: 24px;
+}
+
+.carousel-next {
+  right: 24px;
+}
+
+
+/* PLAY / COUNTER / PROGRESS */
+
+.carousel-controls {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 22px;
+
+  margin-top: 20px;
+}
+
+.carousel-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  border: 0;
+  background: #142824;
+  color: #fff;
+
+  padding: 12px 18px;
+  border-radius: 999px;
+
+  font: inherit;
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.carousel-play:hover {
+  background: #b68a45;
+  transform: translateY(-2px);
+}
+
+.play-icon {
+  font-size: 0.8rem;
+}
+
+.carousel-counter {
+  display: flex;
+  gap: 5px;
+
+  color: #68677f;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+
+/* 7 SEKUNDI ĆEMO KASNIJE ANIMIRATI PREKO JS-a */
+
+.carousel-progress {
+  position: relative;
+  height: 2px;
+  overflow: hidden;
+
+  background: rgba(20, 40, 36, 0.16);
+}
+
+.carousel-progress span {
+  position: absolute;
+  inset: 0 auto 0 0;
+
+  width: 0%;
+  height: 100%;
+
+  background: #b68a45;
+}
+
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 1000px) {
+
+  .art-carousel,
+  .carousel-viewport,
+  .carousel-track {
+    min-height: 580px;
+    height: 580px;
+  }
+
+  .carousel-slide {
+    width: clamp(240px, 43vw, 350px);
+  }
+
+  .carousel-slide.is-prev {
+    transform:
+      translate(-112%, -50%)
+      scale(0.68);
+  }
+
+  .carousel-slide.is-next {
+    transform:
+      translate(12%, -50%)
+      scale(0.68);
+  }
+
+  .carousel-slide.is-far-prev,
+  .carousel-slide.is-far-next {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+}
+
+
+/* ==================================================
+   MOBITEL
+   ================================================== */
+
+@media (max-width: 650px) {
+
+  .gallery-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .gallery-filter {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .art-carousel,
+  .carousel-viewport,
+  .carousel-track {
+    min-height: 520px;
+    height: 520px;
+  }
+
+  .carousel-slide {
+    width: min(76vw, 320px);
+  }
+
+  .carousel-slide.is-prev {
+    opacity: 0.25;
+
+    transform:
+      translate(-102%, -50%)
+      scale(0.72);
+  }
+
+  .carousel-slide.is-next {
+    opacity: 0.25;
+
+    transform:
+      translate(2%, -50%)
+      scale(0.72);
+  }
+
+  .carousel-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+
+  .carousel-prev {
+    left: 10px;
+  }
+
+  .carousel-next {
+    right: 10px;
+  }
+
+  .carousel-controls {
+    grid-template-columns: auto auto;
+  }
+
+  .carousel-progress {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+}
+
+/* ==================================================
+   ART MODAL / FULLSCREEN
+   ================================================== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: rgba(5, 7, 6, 0.94);
+  backdrop-filter: blur(14px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+
+/* MODAL JE OTVOREN */
+
+.modal.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+/* SADRŽAJ */
+
+.modal-inner {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: min(92vw, 1100px);
+  max-height: 90vh;
+}
+
+
+/* VELIKA PREZENTACIJA RADA */
+
+.modal-inner img {
+  display: block;
+
+  width: auto;
+  max-width: 100%;
+  max-height: 82vh;
+
+  object-fit: contain;
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.75);
+
+  transform: scale(0.96);
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.modal.open .modal-inner img {
+  transform: scale(1);
+}
+
+
+/* TEKST ISPOD SLIKE */
+
+.modal-copy {
+  margin-top: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.modal-copy h3 {
+  margin: 0;
+
+  font-size: 1.15rem;
+  font-weight: 400;
+
+  color: #c49a55;
+}
+
+.modal-copy p {
+  margin: 5px 0 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* ZATVARANJE */
+
+.modal-close {
+  position: fixed;
+  top: 24px;
+  right: 28px;
+  z-index: 1010;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+
+  font-size: 1.8rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.modal-close:hover {
+  background: #b68a45;
+  border-color: #b68a45;
+  transform: rotate(90deg);
+}
+
+
+/* ==================================================
+   MODAL - MOBITEL
+   ================================================== */
+
+@media (max-width: 650px) {
+
+  .modal {
+    padding: 20px;
+  }
+
+  .modal-inner {
+    width: 100%;
+  }
+
+  .modal-inner img {
+    max-height: 78vh;
+  }
+
+  .modal-close {
+    top: 14px;
+    right: 14px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 1.5rem;
+  }
+
+  .modal-copy h3 {
+    font-size: 1rem;
+  }
+
+}
+
+.modal-copy {
+  display: none;
+}
+
+/* ==================================================
+   CAROUSEL - KOMPAKTNI DESKTOP PRIKAZ
+   ================================================== */
+
+@media (min-width: 1001px) {
+
+  .gallery-filters {
+    margin-top: 24px;
+    margin-bottom: 22px;
+  }
+
+
+  .art-carousel,
+  .carousel-viewport,
+  .carousel-track {
+    min-height: 520px;
+    height: 520px;
+  }
+
+
+  .carousel-slide {
+    width: clamp(220px, 23vw, 315px);
+    max-height: 455px;
+  }
+
+
+  .carousel-slide img {
+    max-height: 455px;
+  }
+
+
+  .carousel-arrow {
+    width: 46px;
+    height: 46px;
+  }
+
+
+  .carousel-controls {
+    margin-top: 14px;
+    gap: 18px;
+  }
+
+
+  .carousel-play {
+    padding: 10px 16px;
+  }
+
+}

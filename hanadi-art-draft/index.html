@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>Hanadi Rašić — umjetnost između zemlje i Dunava</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="hero" id="pocetna">
     <nav class="nav shell" aria-label="Glavna navigacija">
@@ -38,57 +40,79 @@
       <div class="section-head reveal">
         <p class="eyebrow dark">Odabrani radovi</p>
         <h2>Svaki rad nosi vlastitu priču.</h2>
-        <p>Ovo je prvi radni izbor. Nazivi, tehnike, dimenzije, dostupnost i cijene dopunit će se u sljedećoj verziji.</p>
+        <p>Izbor originalnih radova Hanadi Rašić — od pejzaža i životinjskih motiva
+        do reljefnih i teksturalnih kompozicija.
+        </p>
       </div>
+      <!-- GALERIJA / CAROUSEL -->
 
-      <div class="filters reveal" aria-label="Filtriranje galerije">
-        <button class="filter active" data-filter="all">Sve</button>
-        <button class="filter" data-filter="atmosfera">Pejzaži i atmosfera</button>
-        <button class="filter" data-filter="konji">Konji</button>
-        <button class="filter" data-filter="tekstura">Reljef i tekstura</button>
-      </div>
+<div class="gallery-filters reveal" aria-label="Kategorije radova">
+    <button class="gallery-filter active" data-filter="all">Sve</button>
+    <button class="gallery-filter" data-filter="atmosfera">Pejzaži i atmosfera</button>
+    <button class="gallery-filter" data-filter="zivotinje">Životinje</button>
+    <button class="gallery-filter" data-filter="tekstura">Reljef i tekstura</button>
+    <button class="gallery-filter" data-filter="simboli">Simboli i apstrakcija</button>
+</div>
 
-      <div class="gallery-grid">
-        <article class="art-card tall reveal" data-category="atmosfera" data-full="assets/art-sapat-magle.jpg" data-title="Šapat Magle" data-meta="Akril · detalji uskoro">
-          <img src="assets/art-sapat-magle.jpg" alt="Šapat Magle, rad Hanadi Rašić">
-          <div class="art-info"><h3>Šapat Magle</h3><p>Akril · detalji uskoro</p></div>
-        </article>
 
-        <article class="art-card reveal" data-category="konji" data-full="assets/art-horse-gold.jpg" data-title="Bez naziva — konj" data-meta="Detalji uskoro">
-          <img src="assets/art-horse-gold.jpg" alt="Slika konja sa zlatnim detaljima">
-          <div class="art-info"><h3>Bez naziva — konj</h3><p>Detalji uskoro</p></div>
-        </article>
+<div class="art-carousel reveal" aria-label="Galerija radova Hanadi Rašić">
 
-        <article class="art-card wide reveal" data-category="atmosfera" data-full="assets/art-sailboats.jpg" data-title="Bez naziva — jedrilice" data-meta="Detalji uskoro">
-          <img src="assets/art-sailboats.jpg" alt="Slika jedrilica na vodi">
-          <div class="art-info"><h3>Bez naziva — jedrilice</h3><p>Detalji uskoro</p></div>
-        </article>
+    <button
+        class="carousel-arrow carousel-prev"
+        id="carouselPrev"
+        type="button"
+        aria-label="Prethodni rad">
+        ←
+    </button>
 
-        <article class="art-card reveal" data-category="atmosfera" data-full="assets/art-nebeski-slap.jpg" data-title="Nebeski Slap" data-meta="Akril i reljefni akril · detalji uskoro">
-          <img src="assets/art-nebeski-slap.jpg" alt="Nebeski Slap, rad Hanadi Rašić">
-          <div class="art-info"><h3>Nebeski Slap</h3><p>Akril i reljefni akril</p></div>
-        </article>
 
-        <article class="art-card wide reveal" data-category="atmosfera" data-full="assets/art-blue-storm.jpg" data-title="Bez naziva — plavi horizont" data-meta="Detalji uskoro">
-          <img src="assets/art-blue-storm.jpg" alt="Plavi atmosferski pejzaž">
-          <div class="art-info"><h3>Bez naziva — plavi horizont</h3><p>Detalji uskoro</p></div>
-        </article>
+    <div class="carousel-viewport">
 
-        <article class="art-card reveal" data-category="tekstura" data-full="assets/art-coins.jpg" data-title="Reljefni objekt" data-meta="Mixed media · detalji uskoro">
-          <img src="assets/art-coins.jpg" alt="Reljefni rad s metalnim novčićima">
-          <div class="art-info"><h3>Reljefni objekt</h3><p>Mixed media · detalji uskoro</p></div>
-        </article>
+        <div class="carousel-track" id="carouselTrack">
+            <!-- Slike će ovdje ubacivati JavaScript -->
+        </div>
 
-        <article class="art-card tall reveal" data-category="konji" data-full="assets/art-horse-relief-detail.jpg" data-title="Bez naziva — studija konja" data-meta="Reljefni rad · detalji uskoro">
-          <img src="assets/art-horse-relief-detail.jpg" alt="Reljefna studija konja">
-          <div class="art-info"><h3>Bez naziva — studija konja</h3><p>Reljefni rad · detalji uskoro</p></div>
-        </article>
+    </div>
 
-        <article class="art-card reveal" data-category="tekstura" data-full="assets/art-texture-green.jpg" data-title="Bez naziva — tekstura" data-meta="Reljefni rad · detalji uskoro">
-          <img src="assets/art-texture-green.jpg" alt="Zeleni apstraktni reljefni rad">
-          <div class="art-info"><h3>Bez naziva — tekstura</h3><p>Reljefni rad · detalji uskoro</p></div>
-        </article>
-      </div>
+
+    <button
+        class="carousel-arrow carousel-next"
+        id="carouselNext"
+        type="button"
+        aria-label="Sljedeći rad">
+        →
+    </button>
+
+</div>
+
+
+<div class="carousel-controls reveal">
+
+    <button
+        class="carousel-play"
+        id="carouselPlay"
+        type="button"
+        aria-label="Pokreni automatsko listanje">
+
+        <span class="play-icon">▶</span>
+        <span class="play-label">Pokreni</span>
+
+    </button>
+
+
+    <div class="carousel-counter">
+        <span id="currentSlide">01</span>
+        <span>/</span>
+        <span id="totalSlides">00</span>
+    </div>
+
+
+    <div class="carousel-progress" aria-hidden="true">
+        <span id="carouselProgressBar"></span>
+    </div>
+
+</div>
+      
     </section>
 
     <section class="quote-band">
@@ -105,11 +129,16 @@
       <div class="about-copy reveal">
         <p class="eyebrow dark">O umjetnici</p>
         <h2>Hanadi Rašić</h2>
-        <p class="lead">Rođena 1969. u Osijeku, danas živi i stvara u Dalju, uz Dunav, vrtove, vinovu lozu i poljoprivredne kulture koje se mijenjaju sa svakim godišnjim dobom.</p>
-        <p>Slikarstvo je s vremenom postalo mnogo više od hobija — prostor slobode, mira i osobnog izražavanja. Njezini radovi nastaju ručno i često istražuju teksturu, reljef, atmosferu i motive prirode.</p>
-        <p>Njezin svijet nije odvojen od prostora u kojem živi. Dunav, ravnica, plastenici, vrt i životinje dio su svakodnevice iz koje nastaje njezina vizualna priča.</p>
-        <p>Posebno je vezana uz životinje i svoj dom dijeli s tri psa i pet mačaka. Sva tri psa udomila je nakon teških iskustava iz prijašnjih domova.</p>
-        <p>Uz slikarstvo, njezin senzibilitet oblikuju glazba i introspektivnija estetika — Nick Cave, Depeche Mode i Morrissey.</p>
+        <p class="lead">Rođena 1969. u Osijeku, danas živi i stvara u Dalju, uz Dunav, vrtove, vinovu lozu i
+          poljoprivredne kulture koje se mijenjaju sa svakim godišnjim dobom.</p>
+        <p>Slikarstvo je s vremenom postalo mnogo više od hobija — prostor slobode, mira i osobnog izražavanja. Njezini
+          radovi nastaju ručno i često istražuju teksturu, reljef, atmosferu i motive prirode.</p>
+        <p>Njezin svijet nije odvojen od prostora u kojem živi. Dunav, ravnica, plastenici, vrt i životinje dio su
+          svakodnevice iz koje nastaje njezina vizualna priča.</p>
+        <p>Posebno je vezana uz životinje i svoj dom dijeli s tri psa i pet mačaka. Sva tri psa udomila je nakon teških
+          iskustava iz prijašnjih domova.</p>
+        <p>Uz slikarstvo, njezin senzibilitet oblikuju glazba i introspektivnija estetika — Nick Cave, Depeche Mode i
+          Morrissey.</p>
         <div class="signature">Hanadi Rašić <span>· Dalj</span></div>
       </div>
     </section>
@@ -119,13 +148,17 @@
         <div class="section-head reveal">
           <p class="eyebrow dark">Mjesto stvaranja</p>
           <h2>Između vrta, plastenika i rijeke.</h2>
-          <p>Umjetnost ovdje ne nastaje u sterilnom studiju. Nastaje u stvarnom prostoru — među zemljom, godišnjim dobima, Dunavom i svakodnevnim životom.</p>
+          <p>Umjetnost ovdje ne nastaje u sterilnom studiju. Nastaje u stvarnom prostoru — među zemljom, godišnjim
+            dobima, Dunavom i svakodnevnim životom.</p>
         </div>
+
+
 
         <div class="place-grid">
           <figure class="place-card place-large reveal">
             <img src="assets/place-greenhouse-sunset.jpg" alt="Zalazak sunca iznad plastenika u Dalju">
-            <figcaption><strong>Plastenici i vrt</strong><span>Svjetlo predvečerja nad prostorom u kojem se živi i radi.</span></figcaption>
+            <figcaption><strong>Plastenici i vrt</strong><span>Svjetlo predvečerja nad prostorom u kojem se živi i
+                radi.</span></figcaption>
           </figure>
           <figure class="place-card reveal">
             <img src="assets/place-danube-tree.jpg" alt="Pogled na Dunav iz Dalja">
@@ -133,15 +166,33 @@
           </figure>
           <figure class="place-card reveal">
             <img src="assets/place-winter.jpg" alt="Zimski pogled iz dvorišta u Dalju">
-            <figcaption><strong>Četiri godišnja doba</strong><span>Isti prostor, potpuno drugačije raspoloženje.</span></figcaption>
+            <figcaption><strong>Četiri godišnja doba</strong><span>Isti prostor, potpuno drugačije raspoloženje.</span>
+            </figcaption>
           </figure>
           <figure class="place-card reveal">
             <img src="assets/place-grapes.jpg" alt="Grožđe u vinogradu">
-            <figcaption><strong>Detalji iz vrta</strong><span>Boje i teksture koje postoje prije nego što završe na platnu.</span></figcaption>
+            <figcaption><strong>Detalji iz vrta</strong><span>Boje i teksture koje postoje prije nego što završe na
+                platnu.</span></figcaption>
           </figure>
           <figure class="place-card reveal">
             <img src="assets/place-hay.jpg" alt="Bala sijena u polju kod Dalja">
-            <figcaption><strong>Ravnica</strong><span>Jednostavni prizori s dovoljno prostora za vlastitu priču.</span></figcaption>
+            <figcaption><strong>Ravnica</strong><span>Jednostavni prizori s dovoljno prostora za vlastitu priču.</span>
+            </figcaption>
+          </figure>
+          <figure class="place-card reveal">
+            <img src="assets/chili-harvest.png" alt="Čili papričice iz vrta">
+            <figcaption>
+              <strong>Boje iz vrta</strong>
+              <span>Urod, teksture i boje svakodnevice.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="place-card reveal">
+            <img src="assets/roses.png" alt="Vrč s ružama u vrtu">
+            <figcaption>
+              <strong>Trenuci iz vrta</strong>
+              <span>Priroda i svakodnevni prizori prostora u kojem nastaje umjetnost.</span>
+            </figcaption>
           </figure>
         </div>
       </div>
@@ -151,7 +202,8 @@
       <div class="story-copy reveal">
         <p class="eyebrow dark">Iza slika</p>
         <h2>Umjetnost koja je rasla uz život.</h2>
-        <p>Prije galerije, naziva radova i cijena postoji osobna priča. Obitelj, svakodnevica, glazba, životinje i dom dio su istog svijeta iz kojeg danas nastaju slike.</p>
+        <p>Prije galerije, naziva radova i cijena postoji osobna priča. Obitelj, svakodnevica, glazba, životinje i dom
+          dio su istog svijeta iz kojeg danas nastaju slike.</p>
         <p class="muted">Fotografije iz privatne obiteljske arhive.</p>
       </div>
       <div class="archive reveal">
@@ -165,7 +217,8 @@
         <div class="contact-copy reveal">
           <p class="eyebrow">Kontakt i dostupnost</p>
           <h2>Pronađite rad koji govori vama.</h2>
-          <p>U sljedećoj verziji ovdje će biti navedeni dostupni radovi, dimenzije, cijene i izravan kontakt za upite.</p>
+          <p>U sljedećoj verziji ovdje će biti navedeni dostupni radovi, dimenzije, cijene i izravan kontakt za upite.
+          </p>
           <p class="draft-note">Radni koncept · podaci o prodaji još nisu objavljeni.</p>
         </div>
         <form class="contact-form reveal" id="demoForm">
@@ -190,10 +243,14 @@
     <button class="modal-close" aria-label="Zatvori">×</button>
     <div class="modal-inner">
       <img id="modalImage" src="" alt="">
-      <div class="modal-copy"><h3 id="modalTitle"></h3><p id="modalMeta"></p></div>
+      <div class="modal-copy">
+        <h3 id="modalTitle"></h3>
+        <p id="modalMeta"></p>
+      </div>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
