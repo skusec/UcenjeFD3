@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciklična matrica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="controls">
+      <div class="brand">ULAZ</div>
+
+      <label for="rows">Broj redaka</label>
+      <input id="rows" type="number" min="2" max="50" value="5" />
+
+      <label for="cols">Broj stupaca</label>
+      <input id="cols" type="number" min="2" max="50" value="5" />
+
+      <label for="mode">Način popunjavanja</label>
+      <select id="mode">
+        <option value="1">1. Dolje desno — smjer kazaljke na satu</option>
+        <option value="2">2. Dolje lijevo — smjer kazaljke na satu</option>
+        <option value="3">3. Gore lijevo — smjer kazaljke na satu</option>
+        <option value="4">4. Gore desno — smjer kazaljke na satu</option>
+        <option value="5">5. Dolje desno — kontra smjera kazaljke</option>
+        <option value="6">6. Dolje lijevo — kontra smjera kazaljke</option>
+        <option value="7">7. Gore lijevo — kontra smjera kazaljke</option>
+        <option value="8">8. Gore desno — kontra smjera kazaljke</option>
+        <option value="9">9. Sredina — lijevo, smjer kazaljke</option>
+        <option value="10">10. Sredina — desno, smjer kazaljke</option>
+        <option value="11">11. Sredina — gore, smjer kazaljke</option>
+        <option value="12">12. Sredina — dolje, smjer kazaljke</option>
+        <option value="13">13. Sredina — lijevo, kontra smjera</option>
+        <option value="14">14. Sredina — desno, kontra smjera</option>
+        <option value="15">15. Sredina — gore, kontra smjera</option>
+        <option value="16">16. Sredina — dolje, kontra smjera</option>
+      </select>
+
+      <button id="createBtn" type="button">KREIRAJ TABLICU</button>
+      <p id="message" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="output">
+      <div class="brand output-brand">IZLAZ</div>
+      <div id="matrix" class="matrix-wrap" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
