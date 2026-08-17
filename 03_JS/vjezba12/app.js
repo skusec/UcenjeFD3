@@ -95,6 +95,39 @@ const zadaci = {
   z3: (a, b) => {
     console.log('Zadatak 3');
     // početak 3 
+    
+    
+    if(a.trim() === '' || b.trim() === ''){
+      rezultat.innerHTML = 'Unesite vrijednosti'
+      return
+    }
+
+    const brojA = Number(a)
+    if(!brojA){
+      rezultat.innerHTML = 'A nije broj'
+      return
+    }
+
+    console.log(brojA, b)
+
+    let divovi = ''
+    for(let i = 0; i<brojA; i++){
+
+      if(i % 2 === 0){
+        divovi += `
+       <div style="background-color:${b}">&nbsp;</div>
+        `
+      }else{
+        divovi += '<div>&nbsp;</div>'
+      }
+
+    }
+
+    rezultat.innerHTML = divovi
+
+
+
+
 
     // kraj 3
   },
