@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        <p>Trenutni broj</p>
+        <h1>
+            {{brojac}}
+        </h1>
+        <button class="btn-plus" @click="uvecaj">Uvećaj +1</button>
+        <button class="btn-plus" @click="uvecajDva">Uvećaj +2</button>
+        <button class="btn-minus" @click="umanji">Umanji -1</button>
+        <button class="btn-minus" @click="umanjiDva">Umanji -2</button>
+        <div v-if="upozori">
+            Broj ne može biti manji od 0!
+        </div>
+    </div>
+
+    <script src="vue v3.5.42.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
