@@ -8,3 +8,5 @@ export const RouteNames = {
     SMJEROVI_NOVI: '/smjerovi/novi',
     SMJEROVI_PROMJENA: '/smjerovi/:sifra',
 }
+
+//export const DATA_SOURCE = 'memorija'
