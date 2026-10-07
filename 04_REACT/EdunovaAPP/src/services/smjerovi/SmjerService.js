@@ -23,17 +23,24 @@ async function dodaj(smjer){
 // 3/4 Update od CRUD
 async function promijeni(sifra,smjer){
     const index = nadiIndex(sifra)
-    smjerovi[index] = {...smjerovi[index],...smjer}
+    smjerovi[index] = {...smjerovi[index], ...smjer}
 }
 
 // ne moraju sve funkcije biti dostupne izvana
 function nadiIndex(sifra){
-    return smjerovi.findIndex(s => s.sifra = parseInt(sifra))
+    return smjerovi.findIndex(s => s.sifra === parseInt(sifra))
+}
+
+// 4/4 Delete od CRUD
+async function obrisi(sifra){
+    const index = nadiIndex(sifra)
+    smjerovi.splice(index,1)
 }
 
 export default{
     get,
     dodaj,
     getBySifra,
-    promijeni
+    promijeni,
+    obrisi
 }
